@@ -1,0 +1,82 @@
+.node-bottom {
+    background-image: url("../img/node-bottom.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center bottom; 
+}
+
+.reveal p a:not(.image) {
+    font-size: 70%;
+    margin-bottom: 10px !important;
+}
+
+.reveal .margin-top {
+    margin-top: 40px;
+}
+
+.reveal .margin-bottom {
+    margin-bottom: 40px;
+}
+
+.reveal img.border {
+    border: 1px solid #de4f4f;
+}
+
+.reveal .red {
+    color: #de4f4f;
+}
+
+.max-width {
+    width: 100%;
+}
+
+.reveal .third {
+    width: 28%;
+    padding: 10px;
+    border: 1px solid #de4f4f;
+    border-radius: 5px;
+    font-size: 80%;
+    background-color: rgba(50,50,50,0.8);
+    float: left;
+    margin: 10px;
+}
+
+.reveal .third p:first-child {
+    margin: 0;
+}
+
+.reveal img {
+    max-width: 70%;
+    margin-top: 20px;
+}
+
+.reveal .txt-small {
+    font-size: 80%;
+}
+
+/* Chevron */
+
+.Chevron{
+    position:relative;
+    left: 48%;
+    margin-top: 100px !important;
+    display:block;
+    height:50px;/*height should be double border*/
+}
+.Chevron:before,
+.Chevron:after{
+    position:absolute;
+    display:block;
+    content:"";
+    border:25px solid transparent;/*adjust size*/
+}
+/*Change four 'top' values below to rotate (top/right/bottom/left)*/
+.Chevron:before{
+    top:0;
+    border-top-color: #333;/*Chevron Color*/
+}
+.Chevron:after{
+    top:-10px;/*adjust thickness*/
+    border-top-color:#444;/*Match background colour*/
+}
