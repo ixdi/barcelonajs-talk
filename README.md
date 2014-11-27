@@ -1,9 +1,10 @@
 barcelonajs-talk
 ================
 
-Slides and live code app from my talk about Meteor at Bcn.js
+Slides and app live code from my talk about Meteor at Bcn.js
 
 Meteor: https://www.meteor.com/
+Bcnjs: http://www.barcelonajs.org/
 
 ## License
 
