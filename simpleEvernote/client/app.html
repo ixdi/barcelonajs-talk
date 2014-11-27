@@ -1,0 +1,13 @@
+<head>
+    <title>Simple Evernote</title>
+</head>
+
+<body>
+    {{> Nav}}
+    {{#if currentUser}}
+        {{> Contenido}}
+    {{else}}
+        <h1 class="title">Simple Evernote</h1>
+        <h4 class="subtitle">Creado con Meteor 1.0!</h4>
+    {{/if}}
+</body>

@@ -1,0 +1,66 @@
+<template name="Contenido">
+    <div class="row">
+        <div class="tabs-wrp">
+            <ul> 
+                <li class="col s6"><a id="nueva" class="{{esActiva 'nueva'}}"><i class="fa fa-plus-circle fa-lg"></i> Nueva</a></li>
+                <li class="col s6"><a id="lista" class="{{esActiva 'lista'}}"><i class="fa fa-list fa-lg"></i> Notas</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            {{#if vistaLista}}
+                {{> ListaNotas}}
+            {{else}}
+                {{> NuevaNota}}
+            {{/if}}
+        </div>
+    </div>
+
+<!-- Modal -->
+<a class="hidden modal-trigger" href="#modal-nota" id="lanza-nota">oculto</a>
+<div id="modal-nota" class="modal">
+    <a href="#" class="right modal_close"><i class="fa fa-close fa-lg"></i></a>
+    {{#with getNotaActiva}}
+        <h4>{{titulo}}</h4>
+        <p>{{nota}}</p>
+    {{/with}}
+</div>
+</template>
+
+<template name="NuevaNota">
+    <div class="col s12">
+        <h2 class="header">Nueva Nota</h2>
+    </div>
+    <form class="col s12">
+        <div class="input">
+            <input name="titulo" type="text" required placeholder="Titulo" class="col s12 m6">
+        </div>
+        <div class="input">
+            <textarea name="nota" placeholder="Nota" class="col s12" required></textarea>
+        </div>
+        <div class="input">
+            <button type="submit" class="btn">Agregar</button> 
+        </div>
+    </form>
+</template>
+
+<template name="ListaNotas">
+    <div class="col s12">
+        <h2 class="header">Notas</h2>
+    </div>
+    {{#each colNotas}}
+        <div class="col s12 m6 l4">
+            <div class="card blue {{#if checked}}lighten-3{{/if}}" id="{{_id}}">
+                <div class="muestraContenido">
+                    <h1>{{titulo}}</h1>
+                </div>	
+                <div>
+                    <p>{{fecha timestamp}}</p>
+                    <a class="card-action"><i class="fa fa-check fa-lg {{#if checked}}green-text{{/if}}"></i></a>
+                    <a class="card-action"><i class="fa fa-trash-o fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</template>
